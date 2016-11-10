@@ -1,0 +1,43 @@
+{
+  "name": "string-to-array",
+  "version": "1.0.0",
+  "description": "A node module to convert strings to arrays.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --harmony",
+    "blanket": {
+      "pattern": "//^((?!(node_modules|test)).)*$/",
+      "data-cover-flags": {
+        "debug": false
+      }
+    },
+    "travis-cov": {
+      "threshold": 90
+    }
+  },
+  "devDependencies": {
+    "co": "*",
+    "co-mocha": "*",
+    "coffee-script": "*",
+    "mocha": "*",
+    "should": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frhd/string-to-array.git"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "keywords": [
+    "string-to-array",
+    "strings",
+    "arrays"
+  ],
+  "author": "frhd <farhadino@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frhd/string-to-array/issues"
+  },
+  "homepage": "https://github.com/frhd/string-to-array#readme"
+}
