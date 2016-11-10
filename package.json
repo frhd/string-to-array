@@ -4,13 +4,16 @@
   "description": "A node module to convert strings to arrays.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --harmony",
-    "blanket": {
+   "blanket": {
       "pattern": "//^((?!(node_modules|test)).)*$/",
       "data-cover-flags": {
         "debug": false
       }
     },
+    "test": "mocha --harmony",      
+    "pretest": "npm run compile",
+    "prepublish": "npm run compile",
+    "compile": "coffee --compile --output lib/ src/",
     "travis-cov": {
       "threshold": 90
     }
@@ -20,7 +23,8 @@
     "co-mocha": "*",
     "coffee-script": "*",
     "mocha": "*",
-    "should": "*"
+    "should": "*",
+    "connect-assets": "*"
   },
   "repository": {
     "type": "git",
